@@ -21,7 +21,7 @@ public class dbms {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3307/";
+            String url = "jdbc:mysql://localhost:3306/";
             String un = "root";
             String pw = "";
             c = DriverManager.getConnection(url+"DatabaseName"+"?useSSL=false",un,pw);
