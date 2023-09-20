@@ -17,15 +17,14 @@ import java.sql.Statement;
 public class dbms {
 
     public static Connection c;
-    public static String dbs;
 
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3307/";
             String un = "root";
-            String pw = "2000";
-            c = DriverManager.getConnection(url+dbs+"?useSSL=false",un,pw);
+            String pw = "";
+            c = DriverManager.getConnection(url+"DatabaseName"+"?useSSL=false",un,pw);
         } catch (Exception e) {
             System.out.println("error");
         }
